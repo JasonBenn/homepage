@@ -7,5 +7,6 @@ gem 'haml-rails'
 group :development, :test do
   gem 'spring'
   gem 'pry-remote'
+  gem 'guard-livereload'
 end
 
