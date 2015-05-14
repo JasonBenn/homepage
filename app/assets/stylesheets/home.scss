@@ -18,13 +18,12 @@ $large: 1040px; // captures tablets.
 $medium: 730px; // arbitrary halfway point. Smaller than iPads, larger than phones.
 $small: 420px; // captures the largest phones, iPhone 6 and 6+.
 
-// Reset
+// Box sizing reset
 * {
   box-sizing: border-box;
 }
 
 // Parallax effect
-
 $perspective: 100;
 
 @mixin parallax-parent {
@@ -37,9 +36,19 @@ $perspective: 100;
   transform: translateZ($distance * $perspective + px) scale((($distance * $perspective * -1) / $perspective) + 1);
 }
 
+// Typographic scale
+$text3: 16px;
+$text2: 18px;
+$text1: 21px;
+$heading5: 24px;
+$heading4: 32px;
+$heading3: 48px;
+$heading2: 60px;
+$heading1: 72px;
+
 // Styles
 body {
-  font-size: 16px;
+  font-size: $text3;
   color: $light-text;
   background-color: $light-bg;
 }
@@ -62,8 +71,11 @@ body {
   flex-direction: column;
 
   .heading {
-    font-size: 5em;
-    color: $dark-text;
+    // font-size: 5em;
+    // color: $dark-text;
+    height: 150px;
+    width: 800px;
+    clip-path: url('#svgTextPath');
   }
 }
 
@@ -82,6 +94,15 @@ body {
     .description-wrapper {
       flex: 2 0 0;
       padding: 2em;
+
+      .heading {
+        font-size: $heading5;
+        padding-bottom: 1em;
+      }
+
+      .content {
+        font-size: $text2;
+      }
     }
 
     .image-wrapper {
