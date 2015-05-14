@@ -1,52 +1,11 @@
-// Common rules
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import 'variables';
+@import 'parallax';
+@import 'fonts';
 
-// Colors
-$light-text: rgb(150,150,150);
-$dark-text: rgb(30, 30, 30);
-
-$light-bg: rgb(250,250,250);
-$medium-bg: rgb(230,230,230);
-$dark-bg: rgb(210,210,210);
-
-// Responsive breakpoints
-$large-screen: 1040px; // captures tablets.
-$medium-screen: 730px; // arbitrary halfway point. Smaller than iPads, larger than phones.
-$small-screen: 420px; // captures the largest phones, iPhone 6 and 6+.
-
-// Box sizing reset
 * {
   box-sizing: border-box;
 }
 
-// Parallax effect
-$perspective: 100;
-
-@mixin parallax-parent {
-  perspective: $perspective + px;
-  height: 2000px;
-  overflow-y: auto;
-}
-
-@mixin parallax-child($distance: 0) {
-  transform: translateZ($distance * $perspective + px) scale((($distance * $perspective * -1) / $perspective) + 1);
-}
-
-// Typographic scale
-$text3: 16px;
-$text2: 18px;
-$text1: 21px;
-$heading5: 24px;
-$heading4: 32px;
-$heading3: 48px;
-$heading2: 60px;
-$heading1: 72px;
-
-// Styles
 body {
   font-size: $text3;
   color: $light-text;
@@ -71,9 +30,13 @@ body {
   flex-direction: column;
 
   .heading {
-    height: 150px;
-    width: 800px;
-    clip-path: url('#svgTextPath');
+    color: $dark-text;
+    font-size: $heading0;
+    font-family: $font-intro;
+  }
+
+  .subheading {
+    font-family: $font-body;
   }
 }
 
@@ -115,10 +78,12 @@ body {
         font-size: $heading5;
         color: $dark-text;
         padding-bottom: 1em;
+        font-family: $font-heading;
       }
 
       .content {
         font-size: $text2;
+        font-family: $font-body;
       }
     }
 
@@ -152,22 +117,6 @@ body {
   }
 }
 
-@mixin debug {
-  transform-style: preserve-3d;
-  // WIP
-  transform: translate3d(700px, 0, -800px) rotateY(30deg)
+svg {
+  display: none;
 }
-
-// GRRRR!!
-.intro {
-  // @include parallax-parent;
-}
-
-.intro {
-  // :nth-child(1) { @include parallax-child(-.4); }
-  // :nth-child(2) { @include parallax-child(-.5); }
-  // :nth-child(3) { @include parallax-child(-.3); }
-  // :nth-child(3) { @include parallax-child(-.2); }
-  // :nth-child(3) { @include parallax-child(-.9); }
-}
-

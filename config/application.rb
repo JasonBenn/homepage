@@ -29,5 +29,10 @@ module Homepage
     # config.i18n.default_locale = :de
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+    # Precompile additional assets
+    config.assets.precompile += %w( .svg .eot .woff .ttf )
+
   end
 end

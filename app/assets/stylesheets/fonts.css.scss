@@ -1,0 +1,66 @@
+// Header fonts
+@font-face {
+ font-family: 'Novocento Wide Bold';
+  src: asset-url('Novocento-WideBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+ font-family: 'News Cycle';
+  src: asset-url('NewsCycle-Regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+ font-family: 'Amatic';
+  src: asset-url('Amatic-Bold') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Body fonts
+@font-face {
+ font-family: 'Ostrich Bold';
+  src: asset-url('ostrich-bold') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+ font-family: 'Cicle Fina';
+  src: asset-url('Cicle-Fina') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+ font-family: 'Raleway Bold';
+  src: asset-url('Raleway-Bold') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+ font-family: 'Raleway Light';
+  src: asset-url('Raleway-Light') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// font-family: 'Ostrich Bold';
+// $font-heading: 'Raleway Bold', 'Helvetica', 'sans serif';
+$font-intro: 'Raleway Bold', 'Helvetica', 'sans serif';
+$font-heading: 'Helvetica', 'sans serif';
+
+// font-family: 'News Cycle';
+// font-family: 'Cicle Fina';
+$font-body: 'Raleway Light', 'Helvetica', 'sans serif';
+
+// Typographic scale
+$text3: 16px;
+$text2: 18px;
+$text1: 21px;
+$heading5: 24px;
+$heading4: 32px;
+$heading3: 48px;
+$heading2: 60px;
+$heading1: 72px;
+$heading0: 84px;
