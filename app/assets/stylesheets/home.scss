@@ -11,7 +11,7 @@ $dark-text: rgb(30, 30, 30);
 
 $light-bg: rgb(250,250,250);
 $medium-bg: rgb(230,230,230);
-$dark-bg: rgb(190,190,190);
+$dark-bg: rgb(210,210,210);
 
 // Responsive breakpoints
 $large: 1040px; // captures tablets.
@@ -54,7 +54,7 @@ body {
 }
 
 .container {
-  width: 1000px;
+  // width: 1000px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -71,11 +71,27 @@ body {
   flex-direction: column;
 
   .heading {
-    // font-size: 5em;
-    // color: $dark-text;
     height: 150px;
     width: 800px;
     clip-path: url('#svgTextPath');
+  }
+}
+
+.stripe {
+  height: 6em;
+  background-color: $dark-bg;
+
+  .icon-wrapper {
+    height: 100%;
+    width: 20em;
+    margin: 0 auto;
+    max-width: 80%;
+    @include flex-center;
+    justify-content: space-around;
+  }
+
+  .fa {
+    font-size: $heading4;
   }
 }
 
@@ -97,6 +113,7 @@ body {
 
       .heading {
         font-size: $heading5;
+        color: $dark-text;
         padding-bottom: 1em;
       }
 
@@ -132,12 +149,6 @@ body {
       }
     }
   }
-}
-
-.stripe {
-  height: 8em;
-  background-color: $dark-bg;
-  @include flex-center;
 }
 
 @mixin debug {

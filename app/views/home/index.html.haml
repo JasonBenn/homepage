@@ -4,30 +4,19 @@
     .subheading software engineer
     .subheading passionate about edtech
 
-  .stripe
+  - contact_stripe = capture_haml do
+    .stripe
+      .icon-wrapper
+        %a{href: "https://github.com/JasonBenn"}
+          .fa.fa-github
+        %a{href: "mailto:jasoncbenn@gmail.com"}
+          .fa.fa-envelope-o
+        %a{href: "http://www.linkedin.com/pub/jason-benn/33/168/bb8"}
+          .fa.fa-linkedin
+
+  = contact_stripe
 
   .projects
-    - 5.times do
-      .project
-        .image-wrapper
-          %img.image{src: 'https://andersbjornsbo.files.wordpress.com/2012/02/cloud-success.png'}
-        .description-wrapper
-          .name Clinkle Jobs Page
-          .blurb The jobs page is a web app for recruits to explore job openings and submit their applications. Built in Backbone.js. 
-        
-  .stripe#developing
-    %a{:href => "https://github.com/JasonBenn"}
-      %i#github.icon-github-alt
-        %p Github
-    %a{:href => "mailto:jasoncbenn@gmail.com"}
-      %i.icon-envelope-alt
-        %p Email
-    %a{:href => "http://www.linkedin.com/pub/jason-benn/33/168/bb8"}
-      %i.icon-linkedin
-        %p LinkedIn
-    %a{:href => "resume.pdf"}
-      %i.icon-file-text-alt
-        %p Resume
 
     .project
       .image-wrapper
@@ -85,6 +74,7 @@
         .heading Clinkle Emails
         .content A Ruby compilation pipeline that enables trivially easy HTML email creation and editing. Automates CSS inlining, uploading to Mandrill, tier-specific testing, sharing of styles, and editing in SASS and HAML.
 
+  = contact_stripe
 
 %svg{:height => "0", :width => "0"}
   %defs
