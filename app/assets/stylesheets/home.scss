@@ -1,3 +1,4 @@
+// Common rules
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -17,10 +18,26 @@ $large: 1040px; // captures tablets.
 $medium: 730px; // arbitrary halfway point. Smaller than iPads, larger than phones.
 $small: 420px; // captures the largest phones, iPhone 6 and 6+.
 
+// Reset
 * {
   box-sizing: border-box;
 }
 
+// Parallax effect
+
+$perspective: 100;
+
+@mixin parallax-parent {
+  perspective: $perspective + px;
+  height: 2000px;
+  overflow-y: auto;
+}
+
+@mixin parallax-child($distance: 0) {
+  transform: translateZ($distance * $perspective + px) scale((($distance * $perspective * -1) / $perspective) + 1);
+}
+
+// Styles
 body {
   font-size: 16px;
   color: $light-text;
@@ -101,3 +118,23 @@ body {
   background-color: $dark-bg;
   @include flex-center;
 }
+
+@mixin debug {
+  transform-style: preserve-3d;
+  // WIP
+  transform: translate3d(700px, 0, -800px) rotateY(30deg)
+}
+
+// GRRRR!!
+.intro {
+  // @include parallax-parent;
+}
+
+.intro {
+  // :nth-child(1) { @include parallax-child(-.4); }
+  // :nth-child(2) { @include parallax-child(-.5); }
+  // :nth-child(3) { @include parallax-child(-.3); }
+  // :nth-child(3) { @include parallax-child(-.2); }
+  // :nth-child(3) { @include parallax-child(-.9); }
+}
+
