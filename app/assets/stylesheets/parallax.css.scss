@@ -7,7 +7,6 @@ html {
 
 body { 
   perspective: $perspective + px;
-  transform-style: preserve-3d;
   height: 100%; 
   overflow-y: scroll;
   overflow-x: hidden;
