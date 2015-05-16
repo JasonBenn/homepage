@@ -1,3 +1,4 @@
+// Colors
 $light-text: rgb(150,150,150);
 $dark-text: rgb(30, 30, 30);
 
@@ -5,8 +6,18 @@ $light-bg: rgb(250,250,250);
 $medium-bg: rgb(230,230,230);
 $dark-bg: rgb(210,210,210);
 
-
-
+// Screen breakpoints
 $large-screen: 1040px; // captures tablets.
 $medium-screen: 730px; // arbitrary halfway point. Smaller than iPads, larger than phones.
 $small-screen: 420px; // captures the largest phones, iPhone 6 and 6+.
+
+// Typographic scale
+$text3: 16px;
+$text2: 18px;
+$text1: 21px;
+$heading5: 24px;
+$heading4: 32px;
+$heading3: 48px;
+$heading2: 60px;
+$heading1: 72px;
+$heading0: 84px;

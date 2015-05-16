@@ -23,3 +23,7 @@ body {
   &:nth-of-type(3) { @include parallax-child(-.4); }
   &:nth-of-type(4) { @include parallax-child(-.2); }
 }
+
+.intro .headings {
+  @include parallax-child(-.5);
+}
