@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'utilities';
 @import 'parallax';
 @import 'fonts';
 
@@ -21,6 +22,8 @@ body {
 .intro {
   height: 800px;
   max-height: 60vh;
+  overflow: hidden;
+  position: relative;
 
   @media (max-width: $small-screen) {
     max-height: 100vh;
@@ -39,7 +42,45 @@ body {
     font-family: $font-body;
     line-height: 1.4;
   }
+
+  .cloud {
+    position: absolute;
+    // animation: bob 3s ease-in-out infinite alternate;
+  }
+
+  .cloud-bg {
+    left: 0;
+    top: 0;
+    z-index: -3;
+  }
+
+  .cloud-happy {
+    top: 5em;
+    @include absolute-center;
+    width: 70%;
+    z-index: -2;
+    animation-delay: .5s;
+  }
+
+  .cloud-small {
+    top: 6em;
+    left: 0;
+    z-index: -2;
+    animation-delay: 1s;
+  }
+
+  .cloud-dark {
+    top: 0;
+    width: 66%;
+    @include absolute-center;
+    animation-delay: 1.5s;
+  }
 }
+
+// @keyframes bob {
+//   from { top: 0%; }
+//   to { top: -1%; }
+// }
 
 .stripe {
   height: 6em;
