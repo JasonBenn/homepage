@@ -1,4 +1,4 @@
-$perspective: 100;
+$perspective: 1;
 
 html {
   height: 100%;
@@ -14,7 +14,7 @@ body {
 }
 
 @mixin parallax-child($distance: 0) {
-  transform: translateZ($distance * $perspective + px) scale((($distance * $perspective * -1) / $perspective) + 1);
+  transform: translateZ($distance * $perspective + px) scale(abs((($distance * $perspective)) / $perspective) + 1);
 }
 
 .cloud {
