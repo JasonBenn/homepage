@@ -8,6 +8,7 @@ gem 'haml-rails'
 gem 'foreman'
 gem 'autoprefixer-rails'
 gem 'rails_12factor'
+gem 'uglifier'
 
 group :development, :test do
   gem 'spring'
